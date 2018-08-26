@@ -19,6 +19,19 @@
 
       function onInit() {
         console.log("Web Audio What is lit");
+
+        document.addEventListener('keyup', (event) => {
+          switch(event.keyCode) {
+            case(32):
+              $state.go('webaudiohow');
+              break;
+            case(39):
+              $state.go('webaudiohow');
+              break;
+            default:
+              console.log('unhandled keystroke');
+          }
+        });
       }
 
 

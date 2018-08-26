@@ -1,0 +1,33 @@
+<div id="webAudioHowTitle">
+
+  <h1>How to Web Audio API:</h1>
+</div>
+<div class="codeSnippet">
+
+  <p><a class="declaration">const</a> <a class="variableName">audioContext</a> <a class="assignment">= new (</a><a class="objectName">window</a><a class="assignment">.</a><a class="objectMember">AudioContext</a> <a class="assignment">||</a> <a class="objectName">window</a><a class="assignment">.</a><a class="objectMember">webkitAudioContext</a><a class="assignment">)()</a><a class="objectName">;</a></p>
+</div>
+<div id="webAudioHowBody">
+
+  <h2>The Web Audio API is constructed as an audio routing graph:</h2>
+  <p>This allows for arbitrary routing between <em>AudioNodes</em> with inputs and/or outputs.</p>
+  <p>A <em>Source Node</em> has no input and a single output.</p>
+  <p>A <em>Destination Node</em> has a single input and no output.</p>
+  <p>Other AudioNode types may pass through a signal, altering it in a defined manner. These have both inputs and outputs.</p>
+</div>
+<div id="webAudioHowDiagram">
+
+  <h3>Audio Context</h3>
+  <div id="webAudioHowDiagramSourceNode">
+
+
+    <h4>Source</h4>
+
+  </div>
+  <img src="./img/arrow-38626_1280.png">
+  <div id="webAudioHowDiagramDestinationNode">
+
+
+    <h4>Destination</h4>
+
+  </div>
+</div>
