@@ -1,0 +1,46 @@
+#introductionHeader {
+  border-bottom: solid 3px #D0FFFB;
+}
+
+#introductionHeader h1 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 48px;
+  color: #D0FFFB;
+  margin: 1vmin 0 1vmin 9vmin;
+  padding: 0 0 0 0;
+}
+
+#introductionBody h3 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 36px;
+  color: #D0FFFB;
+  margin: 8vmin 0 1vmin 9vmin;
+}
+
+#introductionBody ul {
+  margin: 8vmin 0 0 2vmin;
+  list-style: none;
+}
+
+#introductionBody li {
+  opacity: 0;
+}
+
+#introductionBody ul li p {
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+  color: #D0FFFB;
+  margin: 4vmin 0 1vmin 9vmin;
+}
+
+#introductionFooter {
+  position: fixed;
+  bottom: 1%;
+}
+
+#introductionFooter p {
+  font-family: 'Dosis', sans-serif;
+  font-size: 18px;
+  color: #D0FFFB;
+  margin: 4vmin 2vmin 1vmin 9vmin;
+}

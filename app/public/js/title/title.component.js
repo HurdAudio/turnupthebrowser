@@ -119,6 +119,19 @@
         n.addEventListener('mouseout', ()=>{
           n.setAttribute("style", "transform: rotateZ(35deg); transition: all 0.5s linear;");
         });
+        document.addEventListener('keyup', (event) => {
+          console.log(event.keyCode);
+          switch (event.keyCode) {
+            case (32):
+              $state.go('introduction');
+              break;
+            case (39):
+              $state.go('introduction');
+              break;
+            default:
+              console.log('unhandled keystroke');
+          }
+        });
 
 
       }

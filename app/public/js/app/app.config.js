@@ -21,6 +21,12 @@
         url: '/',
         parent: 'app',
         component: 'landing'
+      })
+      .state({
+        name: 'introduction',
+        url: '/introduction',
+        parent: 'app',
+        component: 'introduction'
       });
 
 
