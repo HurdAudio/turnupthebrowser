@@ -27,6 +27,12 @@
         url: '/introduction',
         parent: 'app',
         component: 'introduction'
+      })
+      .state({
+        name: 'background',
+        url: '/background',
+        parent: 'app',
+        component: 'background'
       });
 
 

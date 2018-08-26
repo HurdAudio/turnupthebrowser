@@ -43,6 +43,9 @@
                 case (4):
                   introItem4.setAttribute("style", "opacity: 1; transition: opacity 0.5s linear;");
                   break;
+                case (5):
+                  $state.go('background');
+                  break;
                 default:
                   console.log('too much progress');
               }
@@ -68,6 +71,9 @@
                 --itemProgress;
                 break;
               }
+              break;
+            case (39):
+              $state.go('background');
               break;
             default:
               console.log('unsupported keystroke');

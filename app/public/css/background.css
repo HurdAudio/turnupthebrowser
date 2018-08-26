@@ -1,0 +1,45 @@
+#backgroundHeader {
+  border-bottom: solid 3px #D0FFFB;
+}
+
+#backgroundHeader h1 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 48px;
+  color: #D0FFFB;
+  margin: 1vmin 0 1vmin 9vmin;
+  padding: 0 0 0 0;
+}
+
+#backgroundBody img {
+  margin: 0.5vmin 2vmin 1vmin 2vmin;
+  float: left;
+}
+
+#identifyMe {
+  float: left;
+  margin: 0.5vmin 0 1vmin 1vmin;
+}
+
+#identifyMe h4 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+  color: #D0FFFB;
+  margin: 5vmin 0 1vmin 9vmin;
+  padding: 0 0 0 0;
+}
+
+#cv {
+  margin: 0.5vmin 0 1vmin 9vmin;
+}
+
+#cv h3 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+  color: #D0FFFB;
+  margin: 5vmin 0 1vmin 9vmin;
+  padding: 0 0 0 0;
+}
+
+.backData {
+  opacity: 0;
+}
