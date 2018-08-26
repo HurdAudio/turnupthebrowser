@@ -1,0 +1,28 @@
+{
+  "name": "turnupthebrowser",
+  "version": "1.0.0",
+  "description": "Tech Tuesday",
+  "main": "./app/server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HurdAudio/turnupthebrowser.git"
+  },
+  "author": "Devin Hurd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HurdAudio/turnupthebrowser/issues"
+  },
+  "homepage": "https://github.com/HurdAudio/turnupthebrowser#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "knex": "^0.15.2",
+    "path": "^0.12.7",
+    "request": "^2.88.0"
+  }
+}

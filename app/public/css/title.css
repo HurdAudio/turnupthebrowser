@@ -1,0 +1,61 @@
+body {
+  background: #343233;
+}
+
+#titleDiv {
+  margin: 10vmin 0 0 50vmin;
+}
+
+#titleDiv h1 {
+  font-family: 'Share', cursive;
+  font-size: 72px;
+  color: #D0FFFB;
+  cursor: pointer;
+}
+
+.titleLetter {
+  float: left;
+}
+
+#titleTitle {
+  float: left;
+}
+
+#Turn {
+  transform: rotateZ(5deg);
+}
+
+#tUrn {
+  transform: rotateZ(15deg);
+}
+
+#tuRn {
+  transform: rotateZ(25deg);
+}
+
+#turN {
+  transform: rotateZ(35deg);
+  margin-right: 2vmin;
+}
+
+#titleDiv h2 {
+  font-family: 'Share', cursive;
+  font-size: 42px;
+  color: #D0FFFB;
+}
+
+#titleDiv h3 {
+  font-family: 'Share', cursive;
+  font-size: 30px;
+  color: #D0FFFB;
+}
+
+#titleImage {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.8;
+  filter: blur(0.3em);
+  z-index: -4;
+}
