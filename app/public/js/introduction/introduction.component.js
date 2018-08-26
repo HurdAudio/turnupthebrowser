@@ -1,6 +1,8 @@
 (function() {
   'use strict';
 
+  var itemProgress = 0;
+
 
 
   angular.module('app')
@@ -19,7 +21,7 @@
 
       function onInit() {
         console.log("Introduction is lit");
-        let itemProgress = 0;
+        itemProgress = 0;
 
         let introItem1 = document.getElementById('introItem1');
         let introItem2 = document.getElementById('introItem2');
@@ -43,9 +45,10 @@
                 case (4):
                   introItem4.setAttribute("style", "opacity: 1; transition: opacity 0.5s linear;");
                   break;
-                case (5):
-                  $state.go('background');
-                  break;
+                // case (5):
+                //   itemProgress = null;
+                //   $state.go('background');
+                //   break;
                 default:
                   console.log('too much progress');
               }
@@ -73,6 +76,7 @@
               }
               break;
             case (39):
+              itemProgress = null
               $state.go('background');
               break;
             default:

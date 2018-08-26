@@ -1,6 +1,7 @@
 (function() {
   'use strict';
 
+  var backItemProgress = 0;
 
 
   angular.module('app')
@@ -26,7 +27,7 @@
         let backItem4 = document.getElementById('backItem4');
         let backItem5 = document.getElementById('backItem5');
         let backItem6 = document.getElementById('backItem6');
-        let backItemProgress = 0;
+        backItemProgress = 0;
 
         document.addEventListener('keyup', (event)=>{
           switch(event.keyCode) {
@@ -51,6 +52,8 @@
                 case(6):
                   backItem6.setAttribute("style", "opacity: 1; transition: opacity 0.5s linear;");
                   break;
+                case(7):
+                  $state.go('overview');
                 default:
                   console.log('too much progress');
               }

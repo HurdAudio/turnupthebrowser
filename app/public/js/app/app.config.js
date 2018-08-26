@@ -33,6 +33,12 @@
         url: '/background',
         parent: 'app',
         component: 'background'
+      })
+      .state({
+        name: 'overview',
+        url: '/overview',
+        parent: 'app',
+        component: 'overview'
       });
 
 
