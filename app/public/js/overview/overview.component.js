@@ -19,6 +19,19 @@
 
       function onInit() {
         console.log("Overview is lit");
+
+        document.addEventListener('keyup', (event) => {
+          switch(event.keyCode) {
+            case (32):
+              $state.go('webaudiowhat');
+              break;
+            case (39):
+              $state.go('webaudiowhat');
+              break;
+            default:
+              console.log('unhandled key stroke');
+          }
+        });
       }
 
 

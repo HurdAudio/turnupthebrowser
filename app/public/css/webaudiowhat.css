@@ -1,0 +1,30 @@
+#webAudioWhatWhat img {
+  width: 100%;
+  z-index: -4;
+  opacity: 0.3;
+  position: fixed;
+  top: 0;
+}
+
+#webAudioWhatTitle {
+  border-bottom: 3px solid #D0FFFB;
+}
+
+#webAudioWhatTitle h1 {
+  font-family: 'Share', cursive;
+  font-size: 54px;
+  color: #D0FFFB;
+  margin: 2vmin 0 1vmin 9vmin;
+}
+
+#webAudioWhatWhat ul li p {
+  font-family: 'Share', cursive;
+  font-size: 36px;
+  color: #D0FFFB;
+  margin: 3vmin 0 3vmin 9vmin;
+}
+
+#webAudioWhatWhat ul {
+  list-style: none;
+  margin-top: 9vmin;
+}
