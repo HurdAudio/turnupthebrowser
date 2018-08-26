@@ -1,0 +1,130 @@
+#webAudioExamplesTitle {
+  border-bottom: 3px solid #D0FFFB;
+}
+
+#webAudioExamplesTitle h1 {
+  font-family: 'Share', cursive;
+  font-size: 54px;
+  color: #D0FFFB;
+  margin: 2vmin 0 1vmin 9vmin;
+}
+
+#webAudioExamplesBody p {
+  font-family: 'Share', cursive;
+  font-size: 30px;
+  color: #D0FFFB;
+  margin: 1vmin 0 1vmin 5vmin;
+}
+
+#pitchOscillatorDiv1 {
+  background: #151513;
+  border: 1px solid #D0FFFB;
+  padding: 2vmin;
+  margin: 1vmin 3vmin 1vmin 4vmin;
+  float: left;
+  width: 30%;
+  height: 435px;;
+}
+
+#pitchOscillatorDiv1 h2 {
+  font-family: 'Share', cursive;
+  font-size: 42px;
+  color: #D0FFFB;
+  margin: 0.5vmin 0 1vmin 1vmin;
+  color: #FF8F82;
+}
+
+#pitchOscillatorDiv1 select {
+  margin: 0.4vmin 0 0.4vmin 13vmin;
+  font-family: 'Share', cursive;
+  font-size: 26px;
+  color: #000000;
+}
+
+#pitchOscillatorDiv1 input[type=number] {
+  margin: 0.4vmin 0 0.4vmin 13vmin;
+  font-family: 'Share', cursive;
+  font-size: 26px;
+  color: #000000;
+  width: 35%;
+}
+
+#pitchOscillatorDiv1 input[type=range] {
+  margin: 1vmin 0 1vmin 13vmin;
+}
+
+#gainNodeDiv1 {
+  background: #151513;
+  border: 1px solid #D0FFFB;
+  padding: 2vmin;
+  margin: 1vmin 3vmin 1vmin 4vmin;
+  float: left;
+  width: 25%;
+  height: 435px;;
+}
+
+#gainNodeDiv1 h2 {
+  font-family: 'Share', cursive;
+  font-size: 42px;
+  color: #D0FFFB;
+  margin: 0.5vmin 0 1vmin 1vmin;
+  color: #FF8F82;
+}
+
+#gainNodeDiv1 input[type=number] {
+  margin: 4vmin 0 4vmin 13vmin;
+  font-family: 'Share', cursive;
+  font-size: 54px;
+  color: #000000;
+  width: 35%;
+}
+
+#gainNodeDiv1 input[type=range] {
+  margin: 1vmin 0 1vmin 13vmin;
+  transform: scale(2.0);
+}
+
+#modulatorDiv1 {
+  background: #151513;
+  border: 1px solid #D0FFFB;
+  padding: 2vmin;
+  margin: 1vmin 3vmin 1vmin 4vmin;
+  float: left;
+  width: 25%;
+  height: 435px;;
+}
+
+#modulatorDiv1 h2 {
+  font-family: 'Share', cursive;
+  font-size: 42px;
+  color: #D0FFFB;
+  margin: 0.5vmin 0 1vmin 1vmin;
+  color: #FF8F82;
+}
+
+#modulatorDiv1 input[type=number] {
+  margin: 0.4vmin 0 0.4vmin 13vmin;
+  font-family: 'Share', cursive;
+  font-size: 26px;
+  color: #000000;
+  width: 35%;
+}
+
+#modulatorDiv1 input[type=range] {
+  margin: 1vmin 0 1vmin 13vmin;
+}
+
+#modulatorDiv1 select {
+  margin: 0.4vmin 0 0.4vmin 13vmin;
+  font-family: 'Share', cursive;
+  font-size: 26px;
+  color: #000000;
+}
+
+#modulatorDiv1 button {
+  background: grey;
+  margin: 0.4vmin 0 0.4vmin 15vmin;
+  font-family: 'Share', cursive;
+  font-size: 26px;
+  color: #000000;
+}

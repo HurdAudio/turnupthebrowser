@@ -51,6 +51,12 @@
         url: '/webaudiohow',
         parent: 'app',
         component: 'webaudiohow'
+      })
+      .state({
+        name: 'webaudioexamples',
+        url: '/webaudioexamples',
+        parent: 'app',
+        component: 'webaudioexamples'
       });
 
 

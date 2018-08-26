@@ -1,0 +1,112 @@
+<div id="webAudioExamplesTitle">
+
+  <h1>Web Audio Examples:</h1>
+</div>
+
+<div id="webAudioExamplesBody">
+
+  <p>Here is an OscillatorNode (test tone) connected to a GainNode (volume) connected to our Destination (speakers).</p>
+  <p>There is also a second Oscillator with its output set to modulate the GainNode amount. This can be used to affect Amplitude Modulation.</p>
+  <div id="webAudioExample1">
+
+    <div id="pitchOscillatorDiv1">
+      <h2>Oscillator</h2>
+      <p>Waveform Selector:</p>
+      <select id="pitchOscWaveformSelector">
+
+        <option value="sine" selected>sine</option>
+        <option value="square">square</option>
+        <option value="sawtooth">sawtooth</option>
+        <option value="triangle">triangle</option>
+      </select>
+      <p>Frequency:</p>
+      <form>
+        <input id="oscillatorFrequency" class="volumeRead" type="number" name="amountInput" min="1.000" max="11025.000" value="440.000" step="0.001" oninput="this.form.amountRange.value=this.value">
+        <input name="amountRange" type="range" min="1.000" max="11025.000" value="440.00" step="0.001" oninput="this.form.amountInput.value=this.value" id="oscillatorFrequencySlider" class="slider">
+      </form>
+      <p>Detune:</p>
+      <form>
+        <input id="oscillatorDetune" class="volumeRead" type="number" name="amountInput" min="-100.00" max="100.00" value="0.00" step="0.01" oninput="this.form.amountRange.value=this.value">
+        <input name="amountRange" type="range" min="-100.00" max="100.00" value="0.00" step="0.01" oninput="this.form.amountInput.value=this.value" id="oscillatorDetuneSlider" class="slider">
+      </form>
+    </div>
+
+
+    <div id="gainNodeDiv1">
+      <h2>Gain</h2>
+
+      <form>
+          <input id="gainDisplay" class="volumeRead" type="number" name="amountInput" min="0" max="100" value="0" oninput="this.form.amountRange.value=this.value">
+
+          <input name="amountRange" type="range" min="0" max="100" value="0" stepvalue="1" oninput="this.form.amountInput.value=this.value" id="gainVolume">
+
+        </form>
+    </div>
+    <div id="modulatorDiv1">
+      <h2>Modulator</h2>
+      <button id="modulationToggleButton">ON/OFF</button>
+
+      <p>Waveform Selector:</p>
+      <select id="modulatorWaveformSelect">
+
+        <option value="sine" selected>sine</option>
+        <option value="square">square</option>
+        <option value="sawtooth">sawtooth</option>
+        <option value="triangle">triangle</option>
+      </select>
+      <p>Frequency:</p>
+      <form>
+        <input id="modulatorFrequency" class="volumeRead" type="number" name="amountInput" min="1.000" max="11025.000" value="20.000" step="0.001" oninput="this.form.amountRange.value=this.value">
+        <input name="amountRange" type="range" min="1.000" max="11025.000" value="20.00" step="0.001" oninput="this.form.amountInput.value=this.value" id="modulatorFrequencySlider" class="slider">
+      </form>
+      <p>Detune:</p>
+      <form>
+        <input id="modulatorDetune" class="volumeRead" type="number" name="amountInput" min="-100.00" max="100.00" value="0.00" step="0.01" oninput="this.form.amountRange.value=this.value">
+        <input name="amountRange" type="range" min="-100.00" max="100.00" value="0.00" step="0.01" oninput="this.form.amountInput.value=this.value" id="modulatorDetuneSlider" class="slider">
+      </form>
+    </div>
+  </div>
+</div>
+<div class="codeSnippet">
+
+  <p><a class="declaration">const</a> <a class="variableName">audioContext</a> <a class="assignment">= new (</a><a class="objectName">window</a><a class="assignment">.</a><a class="objectMember">AudioContext</a> <a class="assignment">||</a> <a class="objectName">window</a><a class="assignment">.</a><a class="objectMember">webkitAudioContext</a><a class="assignment">)()</a><a class="objectName">;</a></p>
+  <p><a class="declaration">var</a> <a class="variableName">modulationAttenuator</a> <a class="assignment">=</a> <a class="objectMember">audioContext</a><a class="assignment">.createGain()</a><a class="objectName">;</a></p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p><a class="declaration">function</a> <a class="variableName">initializeGainModule</a> <a class="assignment">()</a> <a class="braces">{</a></p>
+    <p>&nbsp&nbsp&nbsp<a class="declaration">let</a> <a class="objectMember">gain</a> <a class="assignment">=</a> <a class="objectMember">audioContext</a><a class="assignment">.createGain()</a><a class="objectName">;</a></p>
+    <p>&nbsp&nbsp&nbsp<a class="objectMember">gain</a><a class="assignment">.</a><a class="objectMember">gain</a><a class="assignment">.</a><a class="variableName">value</a> <a class = "assignment">=</a> <a class="variableName">0</a><a class="objectName">;</a></p>
+    <p>&nbsp&nbsp&nbsp<a class="objectMember">gain</a><a class="assignment">.connect(</a><a class="objectMember">audioContext</a><a class="assignment">.</a><a class="objectMember">destination</a><a class="assignment">)</a><a class="objectName">;</a></p>
+    <br>
+    <p>&nbsp&nbsp&nbsp<a class="declaration">return</a><a class="assignment">(</a><a class="objectMember">gain</a><a class="assignment">)</a><a class="objectName">;</a></p>
+    <p><a class="braces">}</a></p>
+    <br>
+
+    <p><a class="declaration">function</a> <a class="variableName">initializeOscillator</a> <a class="assignment">(</a><a class="objectMember">gain</a><a class="assignment">)</a> <a class="braces">{</a></p>
+      <p>&nbsp&nbsp&nbsp<a class="declaration">let</a> <a class="objectMember">oscillator</a> <a class="assignment">=</a> <a class="objectMember">audioContext</a><a class="assignment">.createOscillator()</a><a class="objectName">;</a></p>
+      <p>&nbsp&nbsp&nbsp<a class="objectMember">oscillator</a><a class="assignment">.</a><a class="objectMember">frequency</a><a class="assignment">.setValueAtTime(</a><a class="variableName">440</a><a class="assignment">,</a> <a class="objectMember">audioContext</a><a class="assignment">.</a><a class="objectMember">currentTime</a><a class="assignment">)</a><a class="objectName">;</a></p>
+      <p>&nbsp&nbsp&nbsp<a class="objectMember">oscillator</a><a class="assignment">.</a><a class="objectMember">detune</a><a class="assignment">.setValueAtTime(</a><a class="variableName">0</a><a class="assignment">,</a> <a class="objectMember">audioContext</a><a class="assignment">.</a><a class="objectMember">currentTime</a><a class="assignment">)</a><a class="objectName">;</a></p>
+      <p>&nbsp&nbsp&nbsp<a class="objectMember">oscillator</a><a class="assignment">.</a><a class="variableName">type</a> <a class="assignment">= 'sine'</a><a class="objectName">;</a></p>
+      <p>&nbsp&nbsp&nbsp<a class="objectMember">oscillator</a><a class="assignment">.connect(</a><a class="objectMember">gain</a><a class="assignment">)</a><a class="objectName">;</a></p>
+      <p>&nbsp&nbsp&nbsp<a class="objectMember">oscillator</a><a class="assignment">.</a><a class="variableName">start</a><a class="assignment">()</a><a class="objectName">;</a></p>
+      <br>
+      <p>&nbsp&nbsp&nbsp<a class="declaration">return</a><a class="assignment">(</a><a class="objectMember">oscillator</a><a class="assignment">)</a><a class="objectName">;</a></p>
+      <p><a class="braces">}</a></p>
+      <br>
+
+      <p><a class="declaration">function</a> <a class="variableName">initializeModulator</a> <a class="assignment">(</a><a class="objectMember">gain</a><a class="assignment">,</a> <a class="objectMember">wave</a><a class="assignment">,</a> <a class="objectMember">frequency</a><a class="assignment">)</a> <a class="braces">{</a></p>
+        <p>&nbsp&nbsp&nbsp<a class="declaration">let</a> <a class="objectMember">modulator</a> <a class="assignment">=</a> <a class="objectMember">audioContext</a><a class="assignment">.createOscillator()</a><a class="objectName">;</a></p>
+        <p>&nbsp&nbsp&nbsp<a class="objectMember">modulatorAttenuator</a><a class="assignment">.</a><a class="objectMember">gain</a><a class="assignment">.</a><a class="variableName">value</a> <a class="assignment">=</a> <a class="objectMember">gain</a><a class="assignment">.</a><a class="objectMember">gain</a><a class="assignment">.</a><a class="variableName">value</a><a class="objectName">;</a></p>
+        <p>&nbsp&nbsp&nbsp<a class="objectMember">modulator</a><a class="assignment">.</a><a class="objectMember">frequency</a><a class="assignment">.setValueAtTime(</a><a class="objectMember">frequency</a><a class="assignment">,</a> <a class="objectMember">audioContext</a><a class="assignment">.</a><a class="objectMember">currentTime</a><a class="assignment">)</a><a class="objectName">;</a></p>
+        <p>&nbsp&nbsp&nbsp<a class="objectMember">modulator</a><a class="assignment">.</a><a class="objectMember">detune</a><a class="assignment">.setValueAtTime(</a><a class="variableName">0</a><a class="assignment">,</a> <a class="objectMember">audioContext</a><a class="assignment">.</a><a class="objectMember">currentTime</a><a class="assignment">)</a><a class="objectName">;</a></p>
+        <p>&nbsp&nbsp&nbsp<a class="objectMember">modulator</a><a class="assignment">.</a><a class="variableName">type</a> <a class="objectMember">= wave</a><a class="objectName">;</a></p>
+        <p>&nbsp&nbsp&nbsp<a class="objectMember">modulator</a><a class="assignment">.connect(</a><a class="objectMember">modulatorAttenuator</a><a class="assignment">)</a><a class="objectName">;</a></p>
+        <p>&nbsp&nbsp&nbsp<a class="objectMember">modulatorAttenuator</a><a class="assignment">.connect(</a><a class="objectMember">gain</a><a class="assignment">.</a><a class="objectMember">gain</a><a class="assignment">)</a><a class="objectName">;</a></p>
+        <p>&nbsp&nbsp&nbsp<a class="objectMember">modulator</a><a class="assignment">.</a><a class="variableName">start</a><a class="assignment">()</a><a class="objectName">;</a></p>
+        <br>
+        <p>&nbsp&nbsp&nbsp<a class="declaration">return</a><a class="assignment">(</a><a class="objectMember">modulator</a><a class="assignment">)</a><a class="objectName">;</a></p>
+        <p><a class="braces">}</a></p>
+
+</div>
